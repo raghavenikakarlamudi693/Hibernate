@@ -1,6 +1,23 @@
-.classpath
+# Eclipse
 .project
+.classpath
 .settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# Java
 *.class
-*.logbin/
+*.jar
+*.war
+*.ear
+
+# Log files
+*.log
+
+# Maven
 target/
+logs/
+log/
