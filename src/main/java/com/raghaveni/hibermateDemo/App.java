@@ -2,6 +2,9 @@ package com.raghaveni.hibermateDemo;
 
 import java.util.List;
 
+import com.raghaveni.onetoone.Profile;
+import com.raghaveni.onetoone.User;
+
 import jakarta.persistence.EntityManager;
 
 
@@ -49,20 +52,43 @@ public class App
     	System.out.println(s);
     	*/
     	
-    	//Delete the row
+    	/*Delete the row
     	
     	Students s = em.find(Students.class, 2);
     	if(s!=null)
     		em.remove(s);
     	
-    	System.out.println("Row is deleted successfully");
+    	System.out.println("Row is deleted successfully");*/
     	
     	
-    	em.getTransaction().commit();
     	
+    	
+    	Profile p = em.find(Profile.class, 8);
+    	if(p==null)
+    	{
+    		p=new Profile("Ongole");
+    	}
+		
+		
+		User u = em.find(User.class, 7);
+		if(u==null)
+		{
+			u=new User("Niharika",p);
+			em.persist(u);
+		
+			
+		}
+		
+		
+		em.getTransaction().commit();
+		
+		
+		
     	
     	em.close();
     	emf.close();
+    	
+    	System.out.println("Complted");
     	
     	//System.out.println("Students inserted successfully!");
     }

@@ -7,7 +7,8 @@
 
     <persistence-unit name="MyPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.raghaveni.hibermateDemo.Students</class>
+        <class>com.raghaveni.hibermateDemo.Profile</class>
+        <class>com.raghaveni.hibermateDemo.User </class>
         
         <properties>
             <!-- DB Configuration -->

@@ -2,6 +2,7 @@ package com.raghaveni.hibermateDemo;
 
 import jakarta.persistence.Entity;
 
+
 import jakarta.persistence.Id;
 
 @Entity
